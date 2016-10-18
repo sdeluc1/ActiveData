@@ -34,7 +34,7 @@ DEMO: navigate to `/lib` folder and run `ruby explorer.rb`
 #### Class Methods
   * `::all` - Returns a list of every row in a particular table
   * `::columns` - Returns a list of each column name in a particular table
-  * `::finalize!` - Creates setter and getter methods for each table column
+  * `::finalize!` - Creates setter and getter methods for each table column:
   ```ruby
     Band.finalize!
     Band.columns # => [:id, :name]
