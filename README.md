@@ -35,12 +35,12 @@ DEMO: navigate to `/lib` folder and run `ruby explorer.rb`
   * `::all` - Returns a list of every row in a particular table
   * `::columns` - Returns a list of each column name in a particular table
   * `::finalize!` - Creates setter and getter methods for each table column
-    ```ruby
+  ```ruby
     Band.finalize!
     Band.columns # => [:id, :name]
     b = Band.new
     b.name = "Radiohead"
     b.name #=> "Radiohead"
-    ```
+  ```
   * `::find(id)` - Fetches a row with a matching `id` and returns a new object
   * `::first`, `::last` - Returns the first or last row in a table as a new object
