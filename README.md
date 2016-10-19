@@ -7,7 +7,7 @@ Objects created using Active Data will inherit from a `SQLObject` class and use
 strict naming conventions to directly tie that class model to a table of the
 same name. For example, a `Cat` object will relate to a table named `cats`.
 
-DEMO: navigate to `/lib` folder and run `ruby explorer.rb`
+##### DEMO: navigate to `/lib` folder and run `ruby explorer.rb`
 
 ### Associations
   * Two models can relate by a `has_many` or `belongs_to` association:
