@@ -35,7 +35,7 @@ DEMO: navigate to `/lib` folder and run `ruby explorer.rb`
   * `::all` - Returns a list of every row in a particular table
   * `::columns` - Returns a list of each column name in a particular table
   * `::finalize!` - Creates setter and getter methods for each table column:
-  
+
   ```ruby
     Band.finalize!
     Band.columns # => [:id, :name]
@@ -45,3 +45,19 @@ DEMO: navigate to `/lib` folder and run `ruby explorer.rb`
   ```
   * `::find(id)` - Fetches a row with a matching `id` and returns a new object
   * `::first`, `::last` - Returns the first or last row in a table as a new object
+
+#### Instance Methods
+  * `#attributes` - Returns a hash of attributes for a given instance
+  * `#attribute_values` - Returns an array of attribute values
+  * `#insert` - Creates a new row in the data table for a given instance
+  * `#update` - Updates the row in the data table that matches the given id
+  * `#save` - Calls either `insert` or `update` based on the object's current status in the database
+
+#### `Searchable` Module
+  * `#where` - The `SQLObject` class extends the `Searchable` module and uses `where` to
+  search the database for specific values
+
+  ```ruby
+    Band.where( { name: "Radiohead" } )
+    #=> [#<Band:0x007ff8d373a248 @attributes={:id=>3, :name=>"Radiohead"}>]
+  ```
